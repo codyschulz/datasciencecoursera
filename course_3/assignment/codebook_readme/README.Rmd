@@ -21,23 +21,27 @@ To run the script, the following packages are required:
 
 ## Reading in the data
 
-First, to read in the non testing and training data, readr's read_delim function was used with a delimiter of " ". For the testing and training data, readr's read_fwf file was used. There are 561 16-character columns.
+First, to read in the non testing and training data, readr's read_delim function was used with a delimiter of " ". For the testing and training data, readr's read_fwf file was used. There are 561 16-character columns.All files in the "in/UCI HAR Dataset" folder were read in.
 
 ## Labeling the data
 
-The current dataset was created by second providing the x_test/train, y_test/train, and subject datasets with descriptive variable names. The x datasets received column names from a modified version of the features dataset (features)
+Second the x_test/train, y_test/train, and subject datasets were provided with descriptive variable names. The x_test/train datasets received column names from a modified version of the features dataset (features.txt).
 
 ## Combining the data
 
 Third, the subject (subject_test/train) and y (y_test/train) datasets were column bound to their respective x datasets (x_test/train). 
 
-Fourth, the resulting testing and training datasets were then row bound to each other. 
+Fourth, the resulting testing and training datasets were then row bound to each other to create a single new aggregated dataset. 
 
 Fifth, the subsequent dataset was merged with the activity codebook (activity_labels) to provide descriptive activity names in the dataset. 
 
 ## Subsetting the data
 
-Sixth, the data were subset to only activity and subject variables as well as those measurement variables including standalone mean and standard deviation.
+Sixth, the data were subset to 
+
+* activity and subject variables 
+
+* those measurement variables including standalone mean and standard deviation
 
 ## Analyzing the data
 
