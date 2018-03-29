@@ -81,6 +81,8 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 
 ## Reading in the data
 
+Note: the "Interial data" has been removed from this repository to save space as it is not used
+
 First, to read in the non testing and training data, readr's read_delim function was used with a delimiter of " ". For the testing and training data, readr's read_fwf file was used. There are 561 16-character columns.
 
 ## Labeling the data

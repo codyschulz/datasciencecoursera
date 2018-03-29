@@ -118,13 +118,10 @@ tt2 <- merge(tt1, activity_labels, by = "activitynum")
 tt3 <- tt2 %>%
   select(activity, activitynum, subjectid, everything())
 
-##### Save
-save(tt3, file = "out/accelerometer_data.Rda")
-
 ##### Create a new dataset that summarizes variables
 tt4 <- tt3 %>%
   group_by(activity, activitynum, subjectid) %>%
   summarize_all(funs(mean))
 
 ##### Save
-save(tt4, file = "out/accelerometer_data_summarized.Rda")
+write.table(tt4, file = "out/accelerometer_data_summarized.txt", row.names = FALSE)
